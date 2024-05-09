@@ -23,7 +23,7 @@ type Props = {
                   <div className="w-full max-w-[1000px]
                   max-[800px]:max-w-[500px] bg-white">
                       { Object.values(results).map((result: any) =>{ 
-                        return  <div>
+                        return  <div key={result.pageid}>
                               <Content key={result.pageid} result={result} />
                           </div>}
                   )}

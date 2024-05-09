@@ -4,7 +4,8 @@ type Props = {
     result: Result
 }
 
-function Content({result}: Props) {
+function Content({ result }: Props) {
+
   const wordCols = (
     <>
     <div className="flex flex-col gap-3 text-left">
@@ -15,30 +16,7 @@ function Content({result}: Props) {
     </div>
     </>
   )
- // const checks: string | undefined = result?.thumbnail?.source;
 
-//   const MainContent = (
-//     <>
-//     <div className="w-full">
-//         <div className="flex justify-start text-left px-1 flex-row">
-//                   {result?.thumbnail?.source?
-//                   <img 
-//                   src={result.thumbnail.source} 
-//                   alt={result.title}
-//                   width={result.thumbnail.width}
-//                   height={result.thumbnail.height}
-//                   loading="lazy"
-//                    />
-//                 :
-//                    <div className="mr-4">
-//                    <img src='url' alt="Not found"/>
-//                    </div>
-//                    }
-//                 <div>{wordCols}</div>
-//         </div>
-//     </div>
-//     </>
-//   )
 
   const MainContent = (
     <>
@@ -54,7 +32,7 @@ function Content({result}: Props) {
                    />
                    :
                    <div className="mr-4">
-                    <img src="url" alt="Not Found"width={100} height={30} />
+                    <Image src="url" alt="Not Found"width={100} height={30} />
                   </div>
                   }
                 <div>{wordCols}</div>
