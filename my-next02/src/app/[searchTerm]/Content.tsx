@@ -24,7 +24,7 @@ function Content({ result }: Props) {
         <div className="flex justify-start text-left px-1 flex-row">
                  {result?.thumbnail?.source?
                   <Image 
-                  src={result.thumbnail.source} 
+                  src={`/${result.thumbnail.source}`} 
                   alt={result.title}
                   width={result.thumbnail.width}
                   height={result.thumbnail.height}
@@ -32,7 +32,7 @@ function Content({ result }: Props) {
                    />
                    :
                    <div className="mr-4">
-                    <Image src="url" alt="Not Found"width={100} height={30} />
+                    <Image src="/url" alt="Not Found"width={100} height={30} />
                   </div>
                   }
                 <div>{wordCols}</div>
