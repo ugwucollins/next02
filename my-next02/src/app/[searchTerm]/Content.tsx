@@ -1,3 +1,4 @@
+import Image from "next/image"
 import Link from "next/link"
 type Props = {
     result: Result
@@ -44,7 +45,7 @@ function Content({result}: Props) {
     <div className="w-full">
         <div className="flex justify-start text-left px-1 flex-row">
                  {result?.thumbnail?.source?
-                  <img 
+                  <Image 
                   src={result.thumbnail.source} 
                   alt={result.title}
                   width={result.thumbnail.width}
