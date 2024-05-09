@@ -8,8 +8,8 @@ type Props = {
         searchTerm: string
     }
 }
- export default async function page({params: { searchTerm }}: Props) {
-  
+ export default async function page({ params: { searchTerm }}: Props) {
+
   const wikiData: Promise<SearchResult> = Getusers(searchTerm);
   const data = await wikiData;
   const results:Result[] | undefined = data?.query?.pages;
@@ -25,7 +25,6 @@ type Props = {
                       { Object.values(results).map((result: any) =>{ 
                         return  <div>
                               <Content key={result.pageid} result={result} />
-                              {/* {JSON.stringify(result)} */}
                           </div>}
                   )}
                   </div>
