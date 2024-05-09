@@ -1,9 +1,8 @@
-//"use client"
 
 import Getusers from "../../../lib/getusers";
 import { Suspense} from 'react';
 import Content from "./Content";
-import { Rings } from 'react-loader-spinner';
+// import { Rings } from 'react-loader-spinner';
 
 type Props = {
     params: {
