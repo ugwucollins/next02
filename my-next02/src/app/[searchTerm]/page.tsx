@@ -21,7 +21,7 @@ type Props = {
               {results?
               <Suspense fallback={<h1>Loading Blog...</h1>}>
                   <div className="w-full max-w-[1000px]
-                  max-[800px]:max-w-[500px] bg-white">
+                  max-[800px]:max-w-[500px] bg-white text-black">
                       { Object.values(results).map((result: any) =>{ 
                         return  <div key={result.pageid}>
                               <Content key={result.pageid} result={result} />
